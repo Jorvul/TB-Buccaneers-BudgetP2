@@ -9,8 +9,8 @@
       "base": 10000000,
       "bonus": 300,
       "merchandise": 2000000,
-      "active": true,
-      "salary_increase": false
+      "active": "Yes",
+      "salary_increase": "No"
     },
     {
       "id": 2,
@@ -21,26 +21,20 @@
       "base": 8000000,
       "bonus": 300,
       "merchandise": 10000000,
-      "active": true,
-      "salary_increase": true
+      "active": "Yes",
+      "salary_increase": "Yes"
     },
     {
       "id": 3,
-      "age": 30,
-      "name": "Chris Godwin",
-      "postion": "WR",
-      "cap": 13000000,
-      "base": 9000000,
-      "bonus": 300,
-      "merchandise": 10000000,
-      "active": true,
-      "salary_increase": true
-    },
-    {
-      "name": "Roger Watts",
-      "position": "LT",
-      "age": "25",
-      "id": 4
+      "age": "30",
+      "name": "Luke Hobbs",
+      "position": "WR",
+      "cap": "25000000",
+      "base": "12000000",
+      "bonus": "2500000",
+      "merchandise": "400000",
+      "active": "Yes",
+      "salary_increase": "No"
     }
   ]
 }

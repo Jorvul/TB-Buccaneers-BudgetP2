@@ -1,13 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 /*html{
-background-image: url("bucks.jpeg");
+background-color:tomato ;
+}
+/*table{
+    background-color:black;
+    color: gray;
 }
 h1{
     text-align: center;
     color: gold;
     font-size: 50px;
 }
-div{
+/*div{
     border-style: solid;
     text-align: center;
     margin-left: 40%;

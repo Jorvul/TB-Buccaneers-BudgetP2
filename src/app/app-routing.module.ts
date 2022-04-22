@@ -7,7 +7,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'create-employee' },
   {path:"employee-create", component:EmployeeCreateComponent},
-  {path:"employee-edit",component:EmployeeEditComponent},
+  {path:"employee-edit/:id",component:EmployeeEditComponent},
   {path:"employee-list",component:EmployeeListComponent}
 ];
 

@@ -1,4 +1,4 @@
-<p>employee-list works!</p>
+<!--<p>employee-list works!</p>-->
 <div class="container custom-container-2">
     <!-- Show it when there is no employee -->
     <div class="no-data text-center" *ngIf="Employee.length == 0">
@@ -9,10 +9,10 @@
     </div>
     <!-- Employees list table, it hides when there is no employee -->
     <div *ngIf="Employee.length !== 0">
-      <h3 class="mb-3 text-center">Employees List</h3>
+      <h3 class="mb-3 text-center">Players List</h3>
       <div class="col-md-12">
-        <table border="3">
-          <thead>
+        <table class="table table-bordered table-hover table-dark">
+          <thead class="table-dark">
             <tr>
               <th scope="col">Player Id</th>
               <th scope="col">Age</th>
@@ -22,27 +22,28 @@
               <th scope="col">Player Base Salary</th>
               <th scope="col">Signing Bonus</th>
               <th scope="col">Merchandise-total</th>
-              <th scope="col">Active-roster</th>
+              <th scope="col">Active</th>
               <th scope="col">Salary-Increase</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let employee of Employee">
+            <tr class="table-light" *ngFor="let employee of Employee">
               <td>{{ employee.id }}</td>
               <td>{{employee.age}}</td>
               <td>{{ employee.name }}</td>
               <td>{{employee.position}}</td>
-              <td>{{ employee.cap }}</td>
-              <td>{{ employee.base }}</td>
-              <td>{{ employee.bonus }}</td>
-              <td>{{ employee.merchandise }}</td>
+              <td>${{ employee.cap }}</td>
+              <td>${{ employee.base }}</td>
+              <td>${{ employee.bonus }}</td>
+              <td>${{ employee.merchandise }}</td>
               <td>{{ employee.active }}</td>
               <td>{{ employee.salary_increase }}</td>
               <td>
-                <span class="edit" routerLink="/employee-edit/{{ employee.id }}"
-                  >Edit</span>
-                <span class="delete" (click)="deleteEmployee(employee.id)"
-                  >Delete</span
+                <button class="button btn-success" routerLink="/employee-edit/{{ employee.id }}"
+                  >Edit</button>
+                <button class="button btn-danger" (click)="deleteEmployee(employee.id)"
+                  >Delete</button
                 >
               </td>
             </tr>
