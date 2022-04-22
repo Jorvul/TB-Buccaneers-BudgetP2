@@ -8,7 +8,7 @@ import { RestApiService } from '../shared/rest-api.service';
   styleUrls: ['./employee-create.component.css']
 })
 export class EmployeeCreateComponent implements OnInit {
-@Input() employeeDetails ={name:"",email:"", phone:0};
+@Input() employeeDetails ={name:"",position:"",age:0};
 
   constructor(public restApi:RestApiService, public router:Router) { }
 

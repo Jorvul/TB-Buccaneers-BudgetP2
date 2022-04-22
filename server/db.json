@@ -1,13 +1,46 @@
 {
-    "employees": [{
+  "employees": [
+    {
       "id": 1,
-      "name": "Tony Stark",
-      "email": "tony@mcu.com",
-      "phone": "001-123-4567"
-    }, {
+      "age": 25,
+      "name": "Mike Evans",
+      "position": "WR",
+      "cap": 15000000,
+      "base": 10000000,
+      "bonus": 300,
+      "merchandise": 2000000,
+      "active": true,
+      "salary_increase": false
+    },
+    {
       "id": 2,
-      "name": "Black Widow",
-      "email": "black-widow@mcu.com",
-      "phone": "001-123-4568"
-    }]
-  }
+      "age": 41,
+      "name": "Tom Brady",
+      "position": "QB",
+      "cap": 20000000,
+      "base": 8000000,
+      "bonus": 300,
+      "merchandise": 10000000,
+      "active": true,
+      "salary_increase": true
+    },
+    {
+      "id": 3,
+      "age": 30,
+      "name": "Chris Godwin",
+      "postion": "WR",
+      "cap": 13000000,
+      "base": 9000000,
+      "bonus": 300,
+      "merchandise": 10000000,
+      "active": true,
+      "salary_increase": true
+    },
+    {
+      "name": "Roger Watts",
+      "position": "LT",
+      "age": "25",
+      "id": 4
+    }
+  ]
+}

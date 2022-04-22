@@ -11,22 +11,33 @@
     <div *ngIf="Employee.length !== 0">
       <h3 class="mb-3 text-center">Employees List</h3>
       <div class="col-md-12">
-        <table class="table table-bordered">
+        <table border="3">
           <thead>
             <tr>
-              <th scope="col">User Id</th>
-              <th scope="col">Name</th>
-              <th scope="col">Email</th>
-              <th scope="col">Phone</th>
-              <th scope="col">Action</th>
+              <th scope="col">Player Id</th>
+              <th scope="col">Age</th>
+              <th scope="col">Player Name</th>
+               <th scope="col">Position</th>
+              <th scope="col">Player Cap Salary</th>
+              <th scope="col">Player Base Salary</th>
+              <th scope="col">Signing Bonus</th>
+              <th scope="col">Merchandise-total</th>
+              <th scope="col">Active-roster</th>
+              <th scope="col">Salary-Increase</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let employee of Employee">
               <td>{{ employee.id }}</td>
+              <td>{{employee.age}}</td>
               <td>{{ employee.name }}</td>
-              <td>{{ employee.email }}</td>
-              <td>{{ employee.phone }}</td>
+              <td>{{employee.position}}</td>
+              <td>{{ employee.cap }}</td>
+              <td>{{ employee.base }}</td>
+              <td>{{ employee.bonus }}</td>
+              <td>{{ employee.merchandise }}</td>
+              <td>{{ employee.active }}</td>
+              <td>{{ employee.salary_increase }}</td>
               <td>
                 <span class="edit" routerLink="/employee-edit/{{ employee.id }}"
                   >Edit</span>
