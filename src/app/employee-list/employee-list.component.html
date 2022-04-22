@@ -1,11 +1,8 @@
 <!--<p>employee-list works!</p>-->
-<div class="container custom-container-2">
+<div class="container custom-container-2" >
     <!-- Show it when there is no employee -->
     <div class="no-data text-center" *ngIf="Employee.length == 0">
       <p>There is no employee added yet!</p>
-      <button class="btn btn-outline-primary" routerLink="/create-employee">
-        Add Empoyee
-      </button>
     </div>
     <!-- Employees list table, it hides when there is no employee -->
     <div *ngIf="Employee.length !== 0">
@@ -51,4 +48,9 @@
         </table>
       </div>
     </div>
+  </div>
+  <div class="text-center">
+  <button class="btn btn-outline-primary justify-content center" routerLink="/employee-create">
+    Add Player
+  </button>
   </div>
