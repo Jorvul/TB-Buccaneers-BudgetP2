@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { RestApiService } from '../shared/rest-api.service';
 
 @Component({
-  selector: 'app-employee-edit',
+  selector: 'app-employee-details',
   templateUrl: './employee-edit.component.html',
   styleUrls: ['./employee-edit.component.css']
 })

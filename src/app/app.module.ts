@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { EmployeeCreateComponent } from './employee-create/employee-create.component';
 import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     EmployeeCreateComponent,
     EmployeeEditComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,

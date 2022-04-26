@@ -23,18 +23,6 @@
       "merchandise": 10000000,
       "active": "Yes",
       "salary_increase": "Yes"
-    },
-    {
-      "id": 3,
-      "age": "22",
-      "name": "Robert",
-      "position": "LT",
-      "cap": "15000000",
-      "base": "",
-      "bonus": "",
-      "merchandise": "",
-      "active": "Yes",
-      "salary_increase": "yes"
     }
   ]
 }
