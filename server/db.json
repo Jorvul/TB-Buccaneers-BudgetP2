@@ -23,6 +23,18 @@
       "merchandise": 10000000,
       "active": "Yes",
       "salary_increase": "Yes"
+    },
+    {
+      "id": 3,
+      "age": "25",
+      "name": "Chris Godwin",
+      "position": "WR",
+      "cap": "15000000",
+      "base": "7800000",
+      "bonus": "2000000",
+      "merchandise": "500000",
+      "active": "Yes",
+      "salary_increase": "No"
     }
   ]
 }

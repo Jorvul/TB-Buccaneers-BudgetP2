@@ -1,4 +1,40 @@
-<form>
+<nav style="background-color: black;">
+  <button class="btn btn-primary" style="border-color: red; background-color: black;" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">Login</button>
+</nav>
+<div>
+  <img src="../assets/bucs.jpg" width="1520">
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Employee Credentials</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">C-suite Identification Code</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your code with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button routerLink="/employees-list" type="button" class="btn btn-primary" data-bs-dismiss="modal">Sign In</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--<form>
     <div class="form-group">
       <label for="formGroupExampleInput">Employee Name</label>
       <input id="inp" type="text" class="form-control" id="formGroupExampleInput" placeholder="Employee Name">
@@ -13,6 +49,6 @@
   <br/>
   <br/>
   <br/>
-  <br/>
+  <br/>-->
 
-  <img class="bg-image" [src]="url" height= "450" width="1540" alt="Responsive image">
+  <!--<img class="bg-image" [src]="url" height= "450" width="1540" alt="Responsive image">-->
