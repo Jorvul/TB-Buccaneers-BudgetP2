@@ -1,8 +1,8 @@
 
-<div class="container custom-container">
-    <div class="col-md-12">
+<div style="background-color: gold" class="container-md">
+    <div style="margin-left: 0px; padding-bottom: 30px;"  class="col-md-12">
 
-      <h3 class="mb-3 text-center">Update Player</h3>
+      <h3 class="mb-3 text-center" style="padding-top:10px;">Update Player</h3>
       <div class="form-group">
         <input type="text" [(ngModel)]="employeeData.name" class="form-control" placeholder="Name">
       </div>
@@ -31,8 +31,9 @@
         <input type="text" [(ngModel)]="employeeData.salary_increase" class="form-control" placeholder="Increase Salary">
       </div>
       <div class="form-group">
-        <button class="btn btn-success btn-lg btn-block" (click)="updateEmployee()">Update Player</button>
+        <button style="margin-left: 570px;" class="btn btn-danger btn-lg btn-block" (click)="updateEmployee()">Update Player</button>
       </div>
 
     </div>
   </div>
+  <img src="../assets/bucs.jpg" width="1530">

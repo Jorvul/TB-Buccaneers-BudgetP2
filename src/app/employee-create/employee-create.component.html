@@ -1,37 +1,38 @@
 
-<div class="container custom-container mb--1 p--1">
-    <div class="col-md-12">
-      <h3 class="mb-3 text-center">Create Player</h3>
+<div style="background-color: gold;" class="container-lg">
+    <div style="padding-left: 80px; padding-bottom: 30px;" class="col-md-11">
+
+      <h3 class="mb-3 text-center" style="padding-top:10px;">Create Player</h3>
       <div class="form-group">
-        <input type="text" [(ngModel)]="employeeDetails.name" class="form-control" style="background-color: #d40909" placeholder="Name">
+        <input type="text" [(ngModel)]="employeeDetails.name" class="form-control" placeholder="Name">
       </div>
       <div class="form-group">
-        <input type="text" [(ngModel)]="employeeDetails.position" class="form-control" style="background-color: #b0b9bf" placeholder="Position">
+        <input type="text" [(ngModel)]="employeeDetails.position" class="form-control" placeholder="Position">
       </div>
       <div class="form-group">
-        <input type="text" [(ngModel)]="employeeDetails.age" class="form-control" style="background-color: #000000;" placeholder="Age">
+        <input type="text" [(ngModel)]="employeeDetails.age" class="form-control" placeholder="Age">
       </div>
       <div class="form-group">
-        <input type="text" [(ngModel)]="employeeDetails.cap" class="form-control" style="background-color: #ff7900;" placeholder="Salary Cap">
+        <input type="text" [(ngModel)]="employeeDetails.cap" class="form-control" placeholder="Salary Cap">
       </div>
       <div class="form-group">
-        <input type="text" [(ngModel)]="employeeDetails.base" class="form-control" style="background-color: #d40909;" placeholder="Base Salary">
+        <input type="text" [(ngModel)]="employeeDetails.base" class="form-control" placeholder="Base Salary">
       </div>
       <div class="form-group">
-        <input type="text" [(ngModel)]="employeeDetails.bonus" class="form-control" style="background-color: #b0b9bf;" placeholder="Signing Bonus">
+        <input type="text" [(ngModel)]="employeeDetails.bonus" class="form-control" placeholder="Signing Bonus">
       </div>
       <div class="form-group">
-        <input type="text" [(ngModel)]="employeeDetails.merchandise" class="form-control" style="background-color: #000000;" placeholder="Merchandise Sales">
+        <input type="text" [(ngModel)]="employeeDetails.merchandise" class="form-control" placeholder="Merchandise Sales">
       </div>
       <div class="form-group">
-        <input type="text" [(ngModel)]="employeeDetails.active" class="form-control" style="background-color: #ff7900;" placeholder="Active Player">
+        <input type="text" [(ngModel)]="employeeDetails.active" class="form-control" placeholder="Active Player">
       </div>
       <div class="form-group">
-        <input type="text" [(ngModel)]="employeeDetails.salary_increase" class="form-control" style="background-color: #d40909;" placeholder="Increase Salary">
+        <input type="text" [(ngModel)]="employeeDetails.salary_increase" class="form-control" placeholder="Increase Salary">
       </div>
       <div class="form-group">
         </div>
-        <button class="btn btn-success btn-lg btn-block" (click)="addEmployee(employeeDetails)">Create Player</button>
+        <button style="margin-left: 480px;" class="btn btn-danger btn-lg btn-block" (click)="addEmployee(employeeDetails)">Create Player</button>
     </div>
   </div>
   <img src="../assets/bucos.jpg" width="1520">

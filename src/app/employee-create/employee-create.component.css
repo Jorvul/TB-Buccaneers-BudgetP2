@@ -1,6 +1,5 @@
-::placeholder{
-    color: white;
-}
 input{
-    color: white;
+    color: red;
+    background-color: black;
+    text-transform: uppercase;
 }

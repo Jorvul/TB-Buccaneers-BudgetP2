@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RestApiService } from '../shared/rest-api.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-employee-list',
@@ -7,10 +8,17 @@ import { RestApiService } from '../shared/rest-api.service';
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent implements OnInit {
+  //id = this.actRoute.snapshot.params['id'];
   Employee: any = [];
-  constructor(public restApi: RestApiService) {}
+  //employeeData: any = {};
+  constructor(public restApi: RestApiService,
+    public actRoute: ActivatedRoute,
+    public router: Router) {}
   ngOnInit() {
     this.loadEmployees();
+    /*this.restApi.getEmployee(this.id).subscribe((data: {}) => {
+      this.employeeData = data;
+    })*/
   }
   // Get employees list
   loadEmployees() {
@@ -25,7 +33,15 @@ export class EmployeeListComponent implements OnInit {
         this.loadEmployees();
       });
     }
-  }
 
+  }
+// Update employee data
+/*updateEmployee() {
+  if(window.confirm('Are you sure, you want to update?')){
+    this.restApi.updateEmployee(this.id, this.employeeData).subscribe(data => {
+      this.router.navigate(['/employees-list']);
+    })
+  }
+}*/
 
 }
