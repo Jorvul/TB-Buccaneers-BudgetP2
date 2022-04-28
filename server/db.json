@@ -21,8 +21,20 @@
       "base": 8000000,
       "bonus": 300,
       "merchandise": 10000000,
-      "active": "No",
+      "active": "Yes",
       "salary_increase": "Yes"
+    },
+    {
+      "id": 3,
+      "age": "28",
+      "name": "Mike Evans",
+      "position": "WR",
+      "cap": "20000000",
+      "base": "3500000",
+      "bonus": "1600000",
+      "merchandise": "600000",
+      "active": "Yes",
+      "salary_increase": "No"
     }
   ]
 }

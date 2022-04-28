@@ -1,10 +1,13 @@
 <nav style="background-color: black;">
   <button class="btn btn-primary align-content center" style="border-color: red; background-color: black;" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">Login</button>
 </nav>
-<div>
+<!--<div>
   <img src="../assets/bucs.jpg" width="1520">
-</div>
-<!--<video src="../assets/Bucs-Video.mp4" muted loop autoplay></video>-->
+</div>-->
+<video src="../assets/Bucs.mp4" loop autoplay [muted]="'muted'" width="1520"></video>
+<!--<video controls width="1520" loop autoplay [muted]="'muted'">
+  <source src="../assets/Bucs.mp4">
+</video>-->
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
