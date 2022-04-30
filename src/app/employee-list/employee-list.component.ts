@@ -36,7 +36,7 @@ export class EmployeeListComponent implements OnInit {
 
   }
 // Update employee data
-/*updateEmployee() {
+/*updateEmployee1() {
   if(window.confirm('Are you sure, you want to update?')){
     this.restApi.updateEmployee(this.id, this.employeeData).subscribe(data => {
       this.router.navigate(['/employees-list']);

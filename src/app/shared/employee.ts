@@ -1,12 +1,12 @@
 export interface Employee {
-    id: string;
-    age:number;
-    name: string;
-    position:string;
-    cap: number;
-    base: number;
-    bonus:number;
-    merchandise:number;
-    active:boolean;
-    salary_increase:boolean
+    client_id: number;
+    client_age:number;
+    client_name: string;
+    client_position:string;
+    client_cap_hit: number;
+    client_base_salary: number;
+    client_signing_bonus:number;
+    client_merchandise:number;
+    client_active:number;
+    client_salary_increase:number
 }

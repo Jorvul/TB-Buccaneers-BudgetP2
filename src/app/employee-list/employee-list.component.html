@@ -6,7 +6,7 @@
     </div>
     <!-- Employees list table, it hides when there is no employee -->
     <div *ngIf="Employee.length !== 0">
-      <h3 class="mb-3 text-center">Players List</h3>
+      <h3 class="mb-3 text-center">Roster List</h3>
       <div class="col-md-12">
         <table border="3" class="table table-bordered table-hover table-dark">
           <thead class="table-dark">
@@ -26,20 +26,20 @@
           </thead>
           <tbody>
             <tr class="table-light" *ngFor="let employee of Employee">
-              <td>{{ employee.id }}</td>
-              <td>{{employee.age}}</td>
-              <td>{{ employee.name }}</td>
-              <td>{{employee.position}}</td>
-              <td>${{ employee.cap }}</td>
-              <td>${{ employee.base }}</td>
-              <td>${{ employee.bonus }}</td>
-              <td>${{ employee.merchandise }}</td>
-              <td>{{ employee.active }}</td>
-              <td>{{ employee.salary_increase }}</td>
+              <td>{{ employee.client_id }}</td>
+              <td>{{employee.client_age}}</td>
+              <td>{{ employee.client_name }}</td>
+              <td>{{employee.client_position}}</td>
+              <td>${{ employee.client_cap_hit }}</td>
+              <td>${{ employee.client_base_salary }}</td>
+              <td>${{ employee.client_signing_bonus }}</td>
+              <td>${{ employee.client_merchandise }}</td>
+              <td>{{ employee.client_active }}</td>
+              <td>{{ employee.client_salary_increase }}</td>
               <td>
-                <button routerLink="/employee-edit/{{employee.id}}" class="button btn-success" type="button"
+                <button routerLink="/employee-edit/{{employee.client_id}}" class="button btn-success" type="button"
                   >Edit</button>
-                <button class="button btn-danger" (click)="deleteEmployee(employee.id)"
+                <button class="button btn-danger" (click)="deleteEmployee(employee.client_id)"
                   >Delete</button>
               </td>
             </tr>
@@ -49,7 +49,7 @@
     </div>
   </div>
   <div class="p-2 mb-7 bg-danger text-white text-center">
-  <button style="color: black; background-color: gold" class="btn btn-outline-primary justify-content center" routerLink="/create-employee">
+  <button  style="color: black; background-color: gold" class="btn btn-outline-primary justify-content center" routerLink="/create-employee">
     Add Player
   </button>
   </div>
@@ -63,7 +63,7 @@
         <h5 class="modal-title" id="exampleModalLabel">Employee Credentials</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" *ngFor="let employee of Employee">
           <div class="mb-3">
             <div class="form-group">
               <input type="text" [(ngModel)]="employeeData.age" class="form-control" placeholder="Age">
@@ -93,9 +93,11 @@
               <input type="text" [(ngModel)]="employeeData.salary_increase" class="form-control" placeholder="Increase Salary">
             </div>
           </div>
-      <div class="modal-footer">
+      <div class="form-group">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Update</button>
+        <div class="form-group">
+        <button (click)="updateEmployee1()" type="button" class="btn btn-primary" data-bs-dismiss="modal">Sign In</button>
+        </div>
       </div>
     </div>
   </div>

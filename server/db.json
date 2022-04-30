@@ -1,20 +1,20 @@
 {
   "employees": [
     {
-      "id": 1,
-      "age": "50",
-      "name": "Travis",
-      "position": "WR",
-      "cap": 15000000,
-      "base": 10000000,
-      "bonus": 300,
-      "merchandise": 2000000,
-      "active": "Yes",
-      "salary_increase": "No"
+      "client_id": 1,
+      "client_age": "50",
+      "client_name": "Travis",
+      "client_position": "WR",
+      "client_cap_hit": 15000000,
+      "client_base_salary": 10000000,
+      "client_signing_bonus": 300,
+      "client_merchandise": 2000000,
+      "client_active": "Yes",
+      "client_salary_increase": "No"
     },
     {
       "id": 2,
-      "age": "25",
+      "age": "50",
       "name": "John Johnson",
       "position": "WR",
       "cap": 15000000,
@@ -28,7 +28,7 @@
       "id": 3,
       "age": "28",
       "name": "Mike Evans",
-      "position": "WR",
+      "position": "LT",
       "cap": "20000000",
       "base": "3500000",
       "bonus": "1600000",
