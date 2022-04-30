@@ -28,7 +28,16 @@ export class EmployeeListComponent implements OnInit {
   }
   // Delete employee
   deleteEmployee(id: any) {
-    if (window.confirm('Are you sure, you want to delete?')) {
+    if (window.confirm('This action will remove player from organization, continue?')) {
+      this.restApi.deleteEmployee(id).subscribe((data) => {
+        this.loadEmployees();
+      });
+    }
+
+  }
+  tradeEmployee1(id: any) {
+    if (window.confirm('Please choose organization player will be traded to')) {
+    window.prompt()
       this.restApi.deleteEmployee(id).subscribe((data) => {
         this.loadEmployees();
       });

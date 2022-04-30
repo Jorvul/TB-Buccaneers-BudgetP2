@@ -38,9 +38,12 @@
               <td>{{ employee.client_salary_increase }}</td>
               <td>
                 <button routerLink="/employee-edit/{{employee.client_id}}" class="button btn-success" type="button"
-                  >Edit</button>
+                  >Update</button>
                 <button class="button btn-danger" (click)="deleteEmployee(employee.client_id)"
-                  >Delete</button>
+                  >Remove</button>
+                  <button class="button btn-primary" (click)="tradeEmployee1(employee.client_id)"
+                  >Trade
+              </button>
               </td>
             </tr>
           </tbody>
