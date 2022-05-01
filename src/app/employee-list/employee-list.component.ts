@@ -36,8 +36,8 @@ export class EmployeeListComponent implements OnInit {
 
   }
   tradeEmployee1(id: any) {
-    if (window.confirm('Please choose organization player will be traded to')) {
-    window.prompt()
+    if (window.confirm('Please Confirm to Trade Player')) {
+    //window.prompt()
       this.restApi.deleteEmployee(id).subscribe((data) => {
         this.loadEmployees();
       });

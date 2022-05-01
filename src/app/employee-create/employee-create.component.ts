@@ -16,7 +16,7 @@ export class EmployeeCreateComponent implements OnInit {
   }
 addEmployee(dataEmployee:any){
   this.restApi.createEmployee(this.employeeDetails).subscribe((data:{})=>{
-    this.router.navigate(['/employees-list']);
+    this.router.navigate(['/full-roster']);
   })
 }
 }

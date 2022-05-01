@@ -21,9 +21,9 @@ export class EmployeeEditComponent implements OnInit {
   }
   // Update employee data
   updateEmployee() {
-    if(window.confirm('Please confirm to update?')){
+    if(window.confirm('Please confirm to update')){
       this.restApi.updateEmployee(this.id, this.employeeData).subscribe(data => {
-        this.router.navigate(['/employees-list'])
+        this.router.navigate(['/full-roster'])
       })
     }
   }

@@ -1,5 +1,6 @@
 import { variable } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -8,8 +9,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
-  user: any = "TeamJRC";
-  password: any = 12345;
+   username: any
+   password: any
 
   constructor( public router :Router,
     public actRoute: ActivatedRoute) { }
@@ -18,10 +19,10 @@ export class LoginPageComponent implements OnInit {
   }
 
   login(){
-  if(this.user === "TeamJRC" && this.password===12345){
-    window.location.href = "/employees-list";
+  if(this.username === "TeamJRC" && this.password==="12345"){
   } else {
-    window.confirm("Employee Credentials are Incorrect!")
+    window.confirm("You have successfully signed in!")
+    window.location.href = "/full-roster";
   }
 }
 

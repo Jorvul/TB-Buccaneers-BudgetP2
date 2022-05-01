@@ -6,10 +6,10 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'create-employee' },
-  { path: "create-employee", component: EmployeeCreateComponent },
-  { path: "employee-edit/:id", component: EmployeeEditComponent },
-  { path: "employees-list", component: EmployeeListComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'login-page' },
+  { path: "add-player", component: EmployeeCreateComponent },
+  { path: "update-player/:id", component: EmployeeEditComponent },
+  { path: "full-roster", component: EmployeeListComponent },
   { path: "login-page",component: LoginPageComponent}
 ];
 
