@@ -1,4 +1,4 @@
-export interface Employee {
+export interface Player {
     client_id: number;
     client_age:number;
     client_name: string;

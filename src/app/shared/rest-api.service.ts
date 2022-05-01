@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
-import { Employee } from '../shared/employee';
+import { Player } from './player';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 @Injectable({
@@ -22,41 +22,41 @@ export class RestApiService {
     }),
   };
   // HttpClient API get() method => Fetch employees list
-  getEmployees(): Observable<Employee> {
+  getPlayers(): Observable<Player> {
     return this.http
-      .get<Employee>(this.apiURL + '/client/all')
+      .get<Player>(this.apiURL + '/client/all')
       .pipe(retry(1), catchError(this.handleError));
   }
   // HttpClient API get() method => Fetch employee
-  getEmployee(id: any): Observable<Employee> {
+  getPlayer(id: any): Observable<Player> {
     return this.http
-      .get<Employee>(this.apiURL + '/client/' + id)
+      .get<Player>(this.apiURL + '/client/' + id)
       .pipe(retry(1), catchError(this.handleError));
   }
   // HttpClient API post() method => Create employee
-  createEmployee(employee: any): Observable<Employee> {
+  createPlayer(player: any): Observable<Player> {
     return this.http
-      .post<Employee>(
+      .post<Player>(
         this.apiURL + '/client',
-        JSON.stringify(employee),
+        JSON.stringify(player),
         this.httpOptions
       )
       .pipe(retry(1), catchError(this.handleError));
   }
   // HttpClient API put() method => Update employee
-  updateEmployee(id: any, employee: any): Observable<Employee> {
+  updatePlayer(id: any, player: any): Observable<Player> {
     return this.http
-      .put<Employee>(
+      .put<Player>(
         this.apiURL + '/client/' + id,
-        JSON.stringify(employee),
+        JSON.stringify(player),
         this.httpOptions
       )
       .pipe(retry(1), catchError(this.handleError));
   }
   // HttpClient API delete() method => Delete employee
-  deleteEmployee(id: any) {
+  deletePlayer(id: any) {
     return this.http
-      .delete<Employee>(this.apiURL + '/client/' + id, this.httpOptions)
+      .delete<Player>(this.apiURL + '/client/' + id, this.httpOptions)
       .pipe(retry(1), catchError(this.handleError));
   }
   // Error handling

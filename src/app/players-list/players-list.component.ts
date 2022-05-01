@@ -3,43 +3,43 @@ import { RestApiService } from '../shared/rest-api.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-employee-list',
-  templateUrl: './employee-list.component.html',
-  styleUrls: ['./employee-list.component.css']
+  selector: 'app-players-list',
+  templateUrl: './players-list.component.html',
+  styleUrls: ['./players-list.component.css']
 })
-export class EmployeeListComponent implements OnInit {
+export class PlayersListComponent implements OnInit {
   //id = this.actRoute.snapshot.params['id'];
-  Employee: any = [];
+  Player: any = [];
   //employeeData: any = {};
   constructor(public restApi: RestApiService,
     public actRoute: ActivatedRoute,
     public router: Router) {}
   ngOnInit() {
-    this.loadEmployees();
+    this.loadPlayers();
     /*this.restApi.getEmployee(this.id).subscribe((data: {}) => {
       this.employeeData = data;
     })*/
   }
   // Get employees list
-  loadEmployees() {
-    return this.restApi.getEmployees().subscribe((data: {}) => {
-      this.Employee = data;
+  loadPlayers() {
+    return this.restApi.getPlayers().subscribe((data: {}) => {
+      this.Player = data;
     });
   }
   // Delete employee
-  deleteEmployee(id: any) {
+  deletePlayer(id: any) {
     if (window.confirm('This action will remove player from organization, continue?')) {
-      this.restApi.deleteEmployee(id).subscribe((data) => {
-        this.loadEmployees();
+      this.restApi.deletePlayer(id).subscribe((data) => {
+        this.loadPlayers();
       });
     }
 
   }
-  tradeEmployee1(id: any) {
+  tradePlayer1(id: any) {
     if (window.confirm('Please Confirm to Trade Player')) {
     //window.prompt()
-      this.restApi.deleteEmployee(id).subscribe((data) => {
-        this.loadEmployees();
+      this.restApi.deletePlayer(id).subscribe((data) => {
+        this.loadPlayers();
       });
     }
 

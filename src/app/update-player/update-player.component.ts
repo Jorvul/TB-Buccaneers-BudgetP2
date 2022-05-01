@@ -4,25 +4,25 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee-details',
-  templateUrl: './employee-edit.component.html',
-  styleUrls: ['./employee-edit.component.css']
+  templateUrl: './update-player.component.html',
+  styleUrls: ['./update-player.component.css']
 })
-export class EmployeeEditComponent implements OnInit {
+export class UpdatePlayerComponent implements OnInit {
   id = this.actRoute.snapshot.params['id'];
-  employeeData: any = {};
+  playerData: any = {};
   constructor(public restApi: RestApiService,
     public actRoute: ActivatedRoute,
     public router: Router) {
   }
   ngOnInit() {
-    this.restApi.getEmployee(this.id).subscribe((data: {}) => {
-      this.employeeData = data;
+    this.restApi.getPlayer(this.id).subscribe((data: {}) => {
+      this.playerData = data;
     })
   }
   // Update employee data
-  updateEmployee() {
+  updatePlayer() {
     if(window.confirm('Please confirm to update')){
-      this.restApi.updateEmployee(this.id, this.employeeData).subscribe(data => {
+      this.restApi.updatePlayer(this.id, this.playerData).subscribe(data => {
         this.router.navigate(['/full-roster'])
       })
     }

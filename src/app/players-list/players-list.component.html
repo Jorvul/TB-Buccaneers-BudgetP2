@@ -1,0 +1,97 @@
+<!--<p>player-list works!</p>-->
+<div class="container custom-container-2">
+    <!-- Show it when there is no player -->
+    <div class="no-data text-center" *ngIf="Player.length == 0">
+      <p>There is no player added yet!</p>
+    </div>
+    <!-- Players list table, it hides when there is no player -->
+    <div *ngIf="Player.length !== 0">
+      <h3 class="mb-3 text-center">Roster List</h3>
+      <div class="col-md-12">
+        <table border="3" class="table table-bordered table-hover table-dark">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">Player Id</th>
+              <th scope="col">Age</th>
+              <th scope="col">Player Name</th>
+               <th scope="col">Position</th>
+              <th scope="col">Player Cap Salary</th>
+              <th scope="col">Player Base Salary</th>
+              <th scope="col">Signing Bonus</th>
+              <th scope="col">Merchandise-total</th>
+              <th scope="col">Active</th>
+              <th scope="col">Salary-Increase</th>
+              <th style="width: 20px;" scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-light" *ngFor="let player of Player">
+              <td>{{ player.client_id }}</td>
+              <td>{{player.client_age}}</td>
+              <td>{{ player.client_name }}</td>
+              <td>{{player.client_position}}</td>
+              <td>${{ player.client_cap_hit }}</td>
+              <td>${{ player.client_base_salary }}</td>
+              <td>${{ player.client_signing_bonus }}</td>
+              <td>${{ player.client_merchandise }}</td>
+              <td>{{ player.client_active }}</td>
+              <td>{{ player.client_salary_increase }}</td>
+              <td>
+                <button style="margin-left: 13px; width: 72px;" routerLink="/update-player/{{player.client_id}}" class="button btn-success" type="button"
+                  >Update</button>
+                <button style="margin-left: 12px;" class="button btn-danger" (click)="deletePlayer(player.client_id)"
+                  >Remove</button>
+                  <div class="container">
+                 <div class="dropdown">
+                    <button style="margin-left: 0px;" class="button btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                      Trade
+                      <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Arizona Cardinals</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Atlanta Falcons</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Baltimore Ravens</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Buffalo Bills</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Carolina Panthers</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Chicago Bears</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Cincinnati Bengals</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Cleveland Browns</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Dallas Cowboys</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Denver Broncos</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Detroit Lions</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Green Bay Packers</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Houston Texans</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Indianapolis Colts</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Jacksonville Jaguars</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Kansas City Chiefs</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Las vegas Raiders</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Los Angeles Chargers</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Los Angeles Rams</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Miami Dolphins</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Minnesota Vikings</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">New England Patriots</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">New Orleans Saints</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">New York Giants</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">New York Jets</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Philadelphia Eagles</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Pittsburgh Steelers</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">San Francisco 49ers</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Seattle Seahawks</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Tennesseen Titans</li>
+                      <li (click)="tradePlayer1(player.client_id)" class="dropdown-item">Washington Commanders</li>
+                    </ul>
+                    </div>
+                  </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="p-2 mb-7 bg-danger text-white text-center">
+  <button  style="color: black; background-color: gold" class="btn btn-outline-primary justify-content center" routerLink="/add-player">
+    Add Player
+  </button>
+  </div>
+  <video src="../assets/bucs2.mp4" loop autoplay [muted]="'muted'" width="1520"></video>
+<!--<img src="../assets/buckos.jpeg" width="1520">-->

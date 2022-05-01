@@ -1,3 +1,4 @@
+import { HttpClient} from '@angular/common/http';
 import { variable } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
@@ -9,14 +10,15 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
-   username: any
-   password: any
-
+username:any
+password:any
   constructor( public router :Router,
     public actRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+
   }
+
 
   login(){
   if(this.username === "TeamJRC" && this.password==="12345"){

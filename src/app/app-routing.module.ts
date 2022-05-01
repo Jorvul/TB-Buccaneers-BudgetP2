@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EmployeeCreateComponent } from './employee-create/employee-create.component';
-import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
-import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { AddplayerComponent } from './add-player/add-player.component';
+import { UpdatePlayerComponent } from './update-player/update-player.component';
+import { PlayersListComponent } from './players-list/players-list.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login-page' },
-  { path: "add-player", component: EmployeeCreateComponent },
-  { path: "update-player/:id", component: EmployeeEditComponent },
-  { path: "full-roster", component: EmployeeListComponent },
+  { path: "add-player", component: AddplayerComponent},
+  { path: "update-player/:id", component: UpdatePlayerComponent},
+  { path: "full-roster", component: PlayersListComponent },
   { path: "login-page",component: LoginPageComponent}
 ];
 
